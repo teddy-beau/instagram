@@ -1,8 +1,8 @@
-// NOTE: replace 'UBaOo1Ozf9SzVNR4IkknQXJBgOg1' with your Firebase auth user id (can be taken from Firebase)
+// NOTE: replace 'UTtayLBlLMdrGYV0rF9oBQJMdO83' with your Firebase auth user id (can be taken from Firebase)
 export function seedDatabase(firebase) {
    const users = [
       {
-         userId: "UBaOo1Ozf9SzVNR4IkknQXJBgOg1",
+         userId: "UTtayLBlLMdrGYV0rF9oBQJMdO83",
          username: "teddy",
          fullName: "Teddy Beau",
          emailAddress: "hello@teddy-beau.com",
@@ -16,7 +16,7 @@ export function seedDatabase(firebase) {
          fullName: "Zouzou",
          emailAddress: "zouzou13@gmail.com",
          following: [],
-         followers: ["UBaOo1Ozf9SzVNR4IkknQXJBgOg1"],
+         followers: ["UTtayLBlLMdrGYV0rF9oBQJMdO83"],
          dateCreated: Date.now(),
       },
       {
@@ -25,7 +25,7 @@ export function seedDatabase(firebase) {
          fullName: "Marco",
          emailAddress: "marco@polo.com",
          following: [],
-         followers: ["UBaOo1Ozf9SzVNR4IkknQXJBgOg1"],
+         followers: ["UTtayLBlLMdrGYV0rF9oBQJMdO83"],
          dateCreated: Date.now(),
       },
       {
@@ -34,7 +34,7 @@ export function seedDatabase(firebase) {
          fullName: "Christine",
          emailAddress: "christine1991@gmail.com",
          following: [],
-         followers: ["UBaOo1Ozf9SzVNR4IkknQXJBgOg1"],
+         followers: ["UTtayLBlLMdrGYV0rF9oBQJMdO83"],
          dateCreated: Date.now(),
       },
    ];
