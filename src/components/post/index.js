@@ -4,6 +4,7 @@ import PostHeader from "./PostHeader";
 import PostImage from "./PostImage";
 import PostActions from "./PostActions";
 import PostFooter from "./PostFooter";
+import PostComments from "./PostComments";
 
 const Post = ({ content }) => {
    const commentInput = useRef(null);
@@ -22,6 +23,12 @@ const Post = ({ content }) => {
             handleFocus={handleFocus}
          />
          <PostFooter caption={content.caption} username={content.username} />
+         <PostComments
+            docId={content.docId}
+            comments={content.comments}
+            posted={content.dateCreated}
+            commentInput={commentInput}
+         />
       </div>
    );
 };

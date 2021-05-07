@@ -1,6 +1,6 @@
 # Instagram
 
-Clone with React, Tailwind CSS, Firebase
+Instagram clone built with React, Tailwind CSS and Firebase.
 
 **WORK IN PROGRESS !**
 
