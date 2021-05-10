@@ -22,6 +22,16 @@ export async function getUserByUserId(userId) {
    return user;
 }
 
+export async function getUserByUsername(username) {
+   const result = await firebase
+      .firestore()
+      .collection("users")
+      .where("username", "==", username)
+      .get();
+
+   return result.docs.map((item) => ({ ...item.data(), docId: item.id }));
+}
+
 export async function getSuggestedProfiles(userId, following) {
    const results = await firebase
       .firestore()
@@ -97,4 +107,22 @@ export async function getPhotos(userId, following) {
    );
 
    return photoWithUserDetails;
+}
+
+// export async function getUserIdByUsername(username) {
+//    const result = firebase.firestore().collection("users").
+// }
+
+export async function getUserPhotosByUsername(username) {
+   const [user] = await await getUserByUsername(username);
+   const result = await firebase
+      .firestore()
+      .collection("photos")
+      .where("userId", "==", user.userId)
+      .get();
+
+   return result.docs.map((item) => ({
+      ...item.data(),
+      docId: item.id,
+   }));
 }
