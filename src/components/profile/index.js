@@ -40,7 +40,6 @@ const UserProfile = ({ user }) => {
             setFollowerCount={dispatch}
          />
          <Photos photos={photosCollection} />
-         <p>Hello {user.username}</p>
       </>
    );
 };
