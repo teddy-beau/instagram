@@ -9,14 +9,12 @@ const Profile = () => {
    const { username } = useParams();
    const history = useHistory();
    const [user, setUser] = useState(null);
-   const [userExists, setUserExists] = useState(false);
 
    useEffect(() => {
       const checkUserExists = async () => {
-         const user = await getUserByUsername(username);
-         if (user.length > 0) {
-            setUser(user[0]);
-            setUserExists(true);
+         const [user] = await getUserByUsername(username);
+         if (user.userId) {
+            setUser(user);
          } else {
             history.push(ROUTES.NOT_FOUND);
          }
@@ -24,7 +22,7 @@ const Profile = () => {
       checkUserExists();
    }, [username, history]);
 
-   return userExists ? (
+   return user?.username ? (
       <div className="bg-gray-background">
          <Header />
          <div className="mx-auto max-w-screen-lg">
